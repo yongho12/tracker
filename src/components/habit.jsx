@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Habbit extends Component {
+class Habit extends Component {
     state = {
         count:0,
     }
@@ -16,10 +16,11 @@ class Habbit extends Component {
     
     
     render() {
+        const { name, count } = this.props.habit;
         return (
             <>    
-                <span className="habit-name">Reading</span>
-                <span className="habit-count">{this.state.count}</span>
+                <span className="habit-name">{name}</span>
+                <span className="habit-count">{count}</span>
                 <button className="habit-button habit-increase" onClick={this.handleIncrememt}>
                     <i className="fas fa-plus-square"></i>
                 </button >
@@ -34,4 +35,4 @@ class Habbit extends Component {
     }
 }
 
-export default Habbit;
+export default Habit;
