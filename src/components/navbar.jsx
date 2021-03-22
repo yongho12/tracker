@@ -5,7 +5,7 @@ class Navbar extends Component {
         return (
             <div className="navbar">
                 <i className="navbar-logo fas fa-leaf"></i>
-                <span>Habbit Tracker</span>
+                <span>Habit Tracker</span>
                 <span className="navbar-count">{this.props.totalCount}</span>
                 
             </div>
