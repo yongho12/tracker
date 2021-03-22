@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class HabitAddForm extends Component {
+    formRef = React.createRef();
     inputRef = React.createRef();
     onSubmit = event => {
         event.preventDefault();
@@ -13,7 +14,7 @@ class HabitAddForm extends Component {
     render() {
        
         return (
-           <form className="add-form" onSubmit={this.onSubmit}>
+           <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
                <input ref={this.inputRef} type="text" className="add-iinput" placeholder="Habit"></input>
                <button className="add-button">Add</button>
            </form>
