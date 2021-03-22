@@ -18,13 +18,13 @@ class App extends Component {
            return { ...habit, count: habit.count +1 };
          }
          return item;
-         this.setState({ habits });
+        
        })
       //  console.log(`handleIncrement ${habit.name}`)
       //  const habits = [...this.state.habits];
       //  const index = habits.indexOf(habit);
       //  habits[index].count++;
-      //  this.setState({ habits });
+       this.setState({ habits });
      
     }
 
@@ -59,7 +59,7 @@ class App extends Component {
     handleReset = () => {
       // console.log("handle Reset")
       const habits = this.state.habits.map(habit => {
-        if (habit.count !=0 ){
+        if (habit.count !==0 ){
           return { ...habit, count: 0 };
         }
         return habit
